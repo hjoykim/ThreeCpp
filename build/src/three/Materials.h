@@ -1,0 +1,20 @@
+#ifndef MATERIALS_H
+#define MATERIALS_H
+#include <three/materials/LineBasicMaterial.h>
+#include <three/materials/LineDashedMaterial.h>
+#include <three/materials/MeshBasicMaterial.h>
+#include <three/materials/MeshDepthMaterial.h>
+#include <three/materials/MeshDistanceMaterial.h>
+#include <three/materials/MeshLambertMaterial.h>
+#include <three/materials/MeshMatcapMaterial.h>
+#include <three/materials/MeshNormalMaterial.h>
+#include <three/materials/MeshPhongMaterial.h>
+#include <three/materials/MeshPhysicalMaterial.h>
+#include <three/materials/MeshStandardMaterial.h>
+#include <three/materials/MeshToonMaterial.h>
+#include <three/materials/PointsMaterial.h>
+#include <three/materials/RawShaderMaterial.h>
+#include <three/materials/ShaderMaterial.h>
+#include <three/materials/ShadowMaterial.h>
+#include <three/materials/SpriteMaterial.h>
+#endif

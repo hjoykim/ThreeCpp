@@ -1,0 +1,12 @@
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcre.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcretest.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcrecpp_unittest.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcreposix.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcrecpp.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcregrep.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcre_scanner_unittest.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/pcre_stringpiece_unittest.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/RUN_TESTS.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/INSTALL.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/ALL_BUILD.dir
+E:/OpenGLWorkSpace/pcre-8.44/build/CMakeFiles/ZERO_CHECK.dir

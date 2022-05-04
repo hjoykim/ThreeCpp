@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{da1eecb6-d34f-4f21-aa10-71e69d835e81}</ProjectGuid>
+    <RootNamespace>Threecpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(THREE_CPP)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(THREE_CPP)\build\$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>$(THREE_CPP)\build\src;$(THREE_CPP)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>ThreeCPP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(THREE_CPP)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(THREE_CPP)\build\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(THREE_CPP)\build\src;$(THREE_CPP)\include;$(IncludePath)</IncludePath>
+    <TargetName>ThreeCPP</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>PCRE_STATIC;GLAD;_DEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>PCRE_STATIC;GLAD;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\three\cameras\Camera.cpp" />
+    <ClCompile Include="src\three\cameras\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\three\controls\TrackballControls.cpp" />
+    <ClCompile Include="src\three\core\BufferAttribute.cpp" />
+    <ClCompile Include="src\three\core\BufferGeometry.cpp" />
+    <ClCompile Include="src\three\core\DirectGeometry.cpp" />
+    <ClCompile Include="src\three\core\Face3.cpp" />
+    <ClCompile Include="src\three\core\Geometry.cpp" />
+    <ClCompile Include="src\three\core\InterleavedBufferAttribute.cpp" />
+    <ClCompile Include="src\three\core\Object3D.cpp" />
+    <ClCompile Include="src\three\geometries\BoxGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\ConvexGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\CylinderGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\DodecahedronGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\IcosahedronGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\LatheGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\OctahedronGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\ParametricGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\PlaneGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\PolyhedronGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\SphereGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\TetrahedronGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\TorusGeometry.cpp" />
+    <ClCompile Include="src\three\geometries\TorusKnotGeometry.cpp" />
+    <ClCompile Include="src\three\helpers\SpotLightHelper.cpp" />
+    <ClCompile Include="src\three\lights\Light.cpp" />
+    <ClCompile Include="src\three\lights\LightShadow.cpp" />
+    <ClCompile Include="src\three\loaders\MTLLoader.cpp" />
+    <ClCompile Include="src\three\loaders\ObjLoader.cpp" />
+    <ClCompile Include="src\three\materials\Material.cpp" />
+    <ClCompile Include="src\three\materials\ShaderMaterial.cpp" />
+    <ClCompile Include="src\three\math\Box2.cpp" />
+    <ClCompile Include="src\three\math\Box3.cpp" />
+    <ClCompile Include="src\three\math\Cylindrical.cpp" />
+    <ClCompile Include="src\three\math\Euler.cpp" />
+    <ClCompile Include="src\three\math\Frustum.cpp" />
+    <ClCompile Include="src\three\math\Line3.cpp" />
+    <ClCompile Include="src\three\math\Matrix3.cpp" />
+    <ClCompile Include="src\three\math\Matrix4.cpp" />
+    <ClCompile Include="src\three\math\Plane.cpp" />
+    <ClCompile Include="src\three\math\Quaternion.cpp" />
+    <ClCompile Include="src\three\math\Sphere.cpp" />
+    <ClCompile Include="src\three\math\Spherical.cpp" />
+    <ClCompile Include="src\three\math\Triangle.cpp" />
+    <ClCompile Include="src\three\math\Vector2.cpp" />
+    <ClCompile Include="src\three\math\Vector3.cpp" />
+    <ClCompile Include="src\three\math\Vector4.cpp" />
+    <ClCompile Include="src\three\objects\Lensflare.cpp" />
+    <ClCompile Include="src\three\objects\Line.cpp" />
+    <ClCompile Include="src\three\objects\LOD.cpp" />
+    <ClCompile Include="src\three\objects\Mesh.cpp" />
+    <ClCompile Include="src\three\objects\Skeleton.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLCubeMap.cpp" />
+    <ClCompile Include="src\three\renderers\GLRenderer.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLBackground.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLBindingStates.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLClipping.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLGeometries.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLInfo.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLLights.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLMaterials.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLMorphtargets.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLObjects.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLProgram.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLPrograms.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLRenderLists.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLRenderTarget.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLShadowMap.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLTextures.cpp" />
+    <ClCompile Include="src\three\renderers\gl\GLUniforms.cpp" />
+    <ClCompile Include="src\three\renderers\shaders\ShaderChunk.cpp" />
+    <ClCompile Include="src\three\renderers\shaders\ShaderLib.cpp" />
+    <ClCompile Include="src\three\renderers\shaders\UniformsLib.cpp" />
+    <ClCompile Include="src\three\textures\DepthTexture.cpp" />
+    <ClCompile Include="src\three\textures\Texture.cpp" />
+    <ClCompile Include="src\three\Types.cpp" />
+    <ClCompile Include="src\three\utils\pcrscpp.cpp" />
+    <ClCompile Include="src\three\utils\StopWatch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\three\cameras\Camera.h" />
+    <ClInclude Include="src\three\cameras\OrthographicCamera.h" />
+    <ClInclude Include="src\three\cameras\PerspectiveCamera.h" />
+    <ClInclude Include="src\three\Constants.h" />
+    <ClInclude Include="src\three\controls\TrackballControls.h" />
+    <ClInclude Include="src\three\core\Attribute.h" />
+    <ClInclude Include="src\three\core\BufferAttribute.h" />
+    <ClInclude Include="src\three\core\BufferGeometry.h" />
+    <ClInclude Include="src\three\core\DirectGeometry.h" />
+    <ClInclude Include="src\three\core\Face3.h" />
+    <ClInclude Include="src\three\core\Geometry.h" />
+    <ClInclude Include="src\three\core\InstancedBufferAttribute.h" />
+    <ClInclude Include="src\three\core\InstancedBufferGeometry.h" />
+    <ClInclude Include="src\three\core\InstancedInterleavedBuffer.h" />
+    <ClInclude Include="src\three\core\InterleavedBuffer.h" />
+    <ClInclude Include="src\three\core\InterleavedBufferAttribute.h" />
+    <ClInclude Include="src\three\core\Layers.h" />
+    <ClInclude Include="src\three\core\Object3D.h" />
+    <ClInclude Include="src\three\extras\objects\ImmediateRenderObject.h" />
+    <ClInclude Include="src\three\geometries\BoxGeometry.h" />
+    <ClInclude Include="src\three\geometries\ConeGeometry.h" />
+    <ClInclude Include="src\three\geometries\ConvexGeometry.h" />
+    <ClInclude Include="src\three\geometries\CylinderGeometry.h" />
+    <ClInclude Include="src\three\geometries\DodecahedronGeometry.h" />
+    <ClInclude Include="src\three\geometries\IcosahedronGeometry.h" />
+    <ClInclude Include="src\three\geometries\LatheGeometry.h" />
+    <ClInclude Include="src\three\geometries\OctahedronGeometry.h" />
+    <ClInclude Include="src\three\geometries\ParametricGeometry.h" />
+    <ClInclude Include="src\three\geometries\PlaneGeometry.h" />
+    <ClInclude Include="src\three\geometries\PolyhedronGeometry.h" />
+    <ClInclude Include="src\three\geometries\SphereGeometry.h" />
+    <ClInclude Include="src\three\geometries\TetrahedronGeometry.h" />
+    <ClInclude Include="src\three\geometries\TorusGeometry.h" />
+    <ClInclude Include="src\three\geometries\TorusKnotGeometry.h" />
+    <ClInclude Include="src\three\helpers\AxesHelper.h" />
+    <ClInclude Include="src\three\helpers\CameraHelper.h" />
+    <ClInclude Include="src\three\helpers\SpotLightHelper.h" />
+    <ClInclude Include="src\three\lights\Light.h" />
+    <ClInclude Include="src\three\lights\LightProbe.h" />
+    <ClInclude Include="src\three\lights\LightShadow.h" />
+    <ClInclude Include="src\three\loaders\MTLLoader.h" />
+    <ClInclude Include="src\three\loaders\ObjLoader.h" />
+    <ClInclude Include="src\three\loaders\TextureLoader.h" />
+    <ClInclude Include="src\three\Materials.h" />
+    <ClInclude Include="src\three\materials\LineBasicMaterial.h" />
+    <ClInclude Include="src\three\materials\LineDashedMaterial.h" />
+    <ClInclude Include="src\three\materials\Material.h" />
+    <ClInclude Include="src\three\materials\MeshBasicMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshDepthMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshDistanceMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshLambertMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshMatcapMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshNormalMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshPhongMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshPhysicalMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshStandardMaterial.h" />
+    <ClInclude Include="src\three\materials\MeshToonMaterial.h" />
+    <ClInclude Include="src\three\materials\PointsMaterial.h" />
+    <ClInclude Include="src\three\materials\RawShaderMaterial.h" />
+    <ClInclude Include="src\three\materials\ShaderMaterial.h" />
+    <ClInclude Include="src\three\materials\ShadowMaterial.h" />
+    <ClInclude Include="src\three\materials\SpriteMaterial.h" />
+    <ClInclude Include="src\three\math\Box2.h" />
+    <ClInclude Include="src\three\math\Box3.h" />
+    <ClInclude Include="src\three\math\Color.h" />
+    <ClInclude Include="src\three\math\ConvexHull.h" />
+    <ClInclude Include="src\three\math\Cylindrical.h" />
+    <ClInclude Include="src\three\math\Euler.h" />
+    <ClInclude Include="src\three\math\Frustum.h" />
+    <ClInclude Include="src\three\math\Interpolant.h" />
+    <ClInclude Include="src\three\math\Line3.h" />
+    <ClInclude Include="src\three\math\MathUtils.h" />
+    <ClInclude Include="src\three\math\MathUtils.hpp" />
+    <ClInclude Include="src\three\math\Matrix3.h" />
+    <ClInclude Include="src\three\math\Matrix4.h" />
+    <ClInclude Include="src\three\math\Plane.h" />
+    <ClInclude Include="src\three\math\Quaternion.h" />
+    <ClInclude Include="src\three\math\Ray.h" />
+    <ClInclude Include="src\three\math\Sphere.h" />
+    <ClInclude Include="src\three\math\Spherical.h" />
+    <ClInclude Include="src\three\math\SphericalHarmonics3.h" />
+    <ClInclude Include="src\three\math\Triangle.h" />
+    <ClInclude Include="src\three\math\Vector2.h" />
+    <ClInclude Include="src\three\math\Vector3.h" />
+    <ClInclude Include="src\three\math\Vector4.h" />
+    <ClInclude Include="src\three\objects\Bone.h" />
+    <ClInclude Include="src\three\objects\Group.h" />
+    <ClInclude Include="src\three\objects\InstancedMesh.h" />
+    <ClInclude Include="src\three\objects\Lensflare.h" />
+    <ClInclude Include="src\three\objects\Line.h" />
+    <ClInclude Include="src\three\objects\LOD.h" />
+    <ClInclude Include="src\three\objects\Mesh.h" />
+    <ClInclude Include="src\three\objects\Points.h" />
+    <ClInclude Include="src\three\objects\Skeleton.h" />
+    <ClInclude Include="src\three\objects\SkinnedMesh.h" />
+    <ClInclude Include="src\three\objects\Sprite.h" />
+    <ClInclude Include="src\three\renderers\gl\GLCubeMap.h" />
+    <ClInclude Include="src\three\renderers\GLCubeRenderTarget.h" />
+    <ClInclude Include="src\three\renderers\GLMultisampleRenderTarget.h" />
+    <ClInclude Include="src\three\renderers\GLRenderer.h" />
+    <ClInclude Include="src\three\renderers\gl\GLAttributes.h" />
+    <ClInclude Include="src\three\renderers\gl\GLBackground.h" />
+    <ClInclude Include="src\three\renderers\gl\GLBindingStates.h" />
+    <ClInclude Include="src\three\renderers\gl\GLBufferRenderer.h" />
+    <ClInclude Include="src\three\renderers\gl\GLBufferRendererInterface.h" />
+    <ClInclude Include="src\three\renderers\gl\GLCapabilities.h" />
+    <ClInclude Include="src\three\renderers\gl\GLClipping.h" />
+    <ClInclude Include="src\three\renderers\gl\GLExtensions.h" />
+    <ClInclude Include="src\three\renderers\gl\GLGeometries.h" />
+    <ClInclude Include="src\three\renderers\gl\GLIndexedBufferRenderer.h" />
+    <ClInclude Include="src\three\renderers\gl\GLInfo.h" />
+    <ClInclude Include="src\three\renderers\gl\GLLights.h" />
+    <ClInclude Include="src\three\renderers\gl\GLMaterials.h" />
+    <ClInclude Include="src\three\renderers\gl\GLMorphtargets.h" />
+    <ClInclude Include="src\three\renderers\gl\GLObjects.h" />
+    <ClInclude Include="src\three\renderers\gl\GLProgram.h" />
+    <ClInclude Include="src\three\renderers\gl\GLPrograms.h" />
+    <ClInclude Include="src\three\renderers\gl\GLProperties.h" />
+    <ClInclude Include="src\three\renderers\gl\GLRenderLists.h" />
+    <ClInclude Include="src\three\renderers\gl\GLRenderState.h" />
+    <ClInclude Include="src\three\renderers\gl\GLRenderStates.h" />
+    <ClInclude Include="src\three\renderers\gl\GLRenderTarget.h" />
+    <ClInclude Include="src\three\renderers\gl\GLShader.h" />
+    <ClInclude Include="src\three\renderers\gl\GLShadowMap.h" />
+    <ClInclude Include="src\three\renderers\gl\GLState.h" />
+    <ClInclude Include="src\three\renderers\gl\GLTextures.h" />
+    <ClInclude Include="src\three\renderers\gl\GLUniforms.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\alphamap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\alphamap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\alphatest_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\aomap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\aomap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\beginnormal_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\begin_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\bsdfs.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\bumpmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clearcoat_normal_fragment_begin.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clearcoat_normal_fragment_maps.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clearcoat_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clipping_planes_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clipping_planes_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clipping_planes_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\clipping_planes_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\color_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\color_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\color_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\color_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\common.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\cube_uv_reflection_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\defaultnormal_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\default_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\default_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\displacementmap_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\displacementmap_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\dithering_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\dithering_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\emissivemap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\emissivemap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\encodings_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\encodings_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_common_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_physical_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\envmap_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\fog_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\fog_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\fog_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\fog_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\gradientmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lightmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lightmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_fragment_begin.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_fragment_end.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_fragment_maps.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_lambert_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_pars_begin.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_phong_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_phong_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_physical_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_physical_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_toon_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\lights_toon_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\logdepthbuf_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\logdepthbuf_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\logdepthbuf_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\logdepthbuf_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\map_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\map_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\map_particle_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\map_particle_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\metalnessmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\metalnessmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\morphnormal_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\morphtarget_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\morphtarget_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\normalmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\normal_fragment_begin.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\normal_fragment_maps.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\packing.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\premultiplied_alpha_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\project_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\roughnessmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\roughnessmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\shadowmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\shadowmap_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\shadowmap_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\shadowmask_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\skinbase_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\skinning_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\skinning_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\skinnormal_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\specularmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\specularmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\tonemapping_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\tonemapping_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\transmissionmap_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\transmissionmap_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv2_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv2_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv2_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv_pars_fragment.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv_pars_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\uv_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderChunk\worldpos_vertex.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\background_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\background_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\cube_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\cube_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\depth_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\depth_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\distanceRGBA_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\distanceRGBA_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\equirect_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\equirect_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\linedashed_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\linedashed_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshbasic_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshbasic_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshlambert_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshlambert_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshmatcap_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshmatcap_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshphong_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshphong_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshphysical_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshphysical_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshtoon_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\meshtoon_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\normal_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\normal_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\points_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\points_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\shadow_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\shadow_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\sprite_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\sprite_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\vsm_frag.h" />
+    <ClInclude Include="src\three\renderers\shaders\ShaderLib\vsm_vert.h" />
+    <ClInclude Include="src\three\renderers\shaders\UniformsLib.h" />
+    <ClInclude Include="src\three\renderers\shaders\UniformsUtils.h" />
+    <ClInclude Include="src\three\scenes\Fog.h" />
+    <ClInclude Include="src\three\scenes\Scene.h" />
+    <ClInclude Include="src\three\scenes\SceneUtils.h" />
+    <ClInclude Include="src\three\textures\CompressedTexture.h" />
+    <ClInclude Include="src\three\textures\CubeTexture.h" />
+    <ClInclude Include="src\three\textures\DataTexture.h" />
+    <ClInclude Include="src\three\textures\DataTexture2DArray.h" />
+    <ClInclude Include="src\three\textures\DataTexture3D.h" />
+    <ClInclude Include="src\three\textures\DepthTexture.h" />
+    <ClInclude Include="src\three\textures\Texture.h" />
+    <ClInclude Include="src\three\textures\VideoTexture.h" />
+    <ClInclude Include="src\three\ThreeMath.h" />
+    <ClInclude Include="src\three\Types.h" />
+    <ClInclude Include="src\three\utils\osdecl.h" />
+    <ClInclude Include="src\three\utils\pcrscpp.h" />
+    <ClInclude Include="src\three\utils\pcrscpp_macros.h" />
+    <ClInclude Include="src\three\utils\simplesignal.h" />
+    <ClInclude Include="src\three\utils\sole.h" />
+    <ClInclude Include="src\three\utils\stb_image.h" />
+    <ClInclude Include="src\three\utils\stb_image_resize.h" />
+    <ClInclude Include="src\three\utils\stb_image_write.h" />
+    <ClInclude Include="src\three\utils\StopWatch.h" />
+    <ClInclude Include="src\three\utils\Timer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
