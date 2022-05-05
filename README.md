@@ -1,6 +1,6 @@
 # ThreeCpp
 three.js is a very powerful, simple and useful OpenGL Graphics library.
-I always want to express my deep appreciation to the team that created this library.(https://github.com/jdduke/three_cpp).
+I always want to express my deep appreciation to the team that created this library.(https://github.com/mrdoob/three.js).
 There was a time when I wanted to show how to use these 3D geometry and mathematical theories with OpenGL libraries. 
 In that case, the examples of three.js was a very good.
 
