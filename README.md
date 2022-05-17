@@ -74,6 +74,11 @@ The focus of this C++ porting job is the data loading part like as .obj, other m
         
 	}
 
+#### To run application, you need to copy font files to execution directory from misc/fonts directory
+> Cousine-Regular.ttf,DroidSans.ttf,Karla-Regular.ttf,ProggyClean.ttf,ProggyTiny.ttf, Roboto-Medium.ttf
+![image](https://user-images.githubusercontent.com/3807476/168829051-d6f0be36-9038-4fe4-881c-10317a9a6198.png)
+
+
 ### Example Capture
 > Camera, Scene, Light, TrackballControls, Material, OBJLoader
 #### MFC Application
