@@ -68,8 +68,9 @@ void BasicMeshMaterialExample::init()
 
 	thread thread1([&](const string& filepath) 
 		{
+			std::string dir = std::filesystem::current_path().parent_path().parent_path().string();
 			OBJLoader loader;
-			gopher = loader.load(getProgramPath() + "\\" + filepath);
+			gopher = loader.load(dir + "\\assets\\models\\gopher\\" + filepath);
 			gopher->traverse([&](Object3D& o) {
 				o.material = meshMaterial;
 				if (instanceOf<Mesh>(&o) && o.materials.size() > 1) {

@@ -78,8 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(THREE_CPP)\lib\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(THREE_CPP)\build\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>.\$(Platform)\$(Configuration)\</IntDir>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(THREE_CPP)\build\src;$(THREE_CPP)\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
