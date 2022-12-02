@@ -179,6 +179,7 @@
     <ClInclude Include="learningjs\ch3\PointLightExample.h" />
     <ClInclude Include="learningjs\ch3\SpotLightExample.h" />
     <ClInclude Include="learningjs\ch4\BasicMeshMaterialExample.h" />
+    <ClInclude Include="learningjs\ch5\Basic2DGeometriesPlane.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ecore\ExampleUtil.cpp" />
@@ -198,6 +199,7 @@
     <ClCompile Include="learningjs\ch2\MeshProperties.cpp" />
     <ClCompile Include="learningjs\ch3\AmbientLightExample.cpp" />
     <ClCompile Include="learningjs\ch4\BasicMeshMaterialExample.cpp" />
+    <ClCompile Include="learningjs\ch5\Basic2DGeometriesPlane.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui\imgui.ini" />

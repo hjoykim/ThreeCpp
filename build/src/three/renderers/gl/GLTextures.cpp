@@ -12,9 +12,15 @@
 #include <three/renderers/GLMultisampleRenderTarget.h>
 #include <three/textures/CubeTexture.h>
 #include <three/textures/VideoTexture.h>
+#ifndef STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
+#endif
+#ifndef STB_IMAGE_RESIZE_IMPLEMENTATION
 #define STB_IMAGE_RESIZE_IMPLEMENTATION
+#endif
+#ifndef STB_IMAGE_RESIZE_STATIC
 #define STB_IMAGE_RESIZE_STATIC
+#endif
 #include "stb_image.h"
 #include "stb_image_resize.h"
 namespace three {

@@ -38,7 +38,9 @@ namespace three {
 
 			morphNormals = false;
 		}
-		
+		MeshNormalMaterial(const Color& color) : MeshNormalMaterial() {
+			this->color = color;
+		}
 		MeshNormalMaterial(const MeshNormalMaterial& source) : Material(source) {
 			shaderId = "normal";
 			bumpMap = source.bumpMap;
@@ -59,7 +61,13 @@ namespace three {
 			morphTargets = source.morphTargets;
 			morphNormals = source.morphNormals;
 		}
+		static ptr create() {
+			return std::make_shared<MeshNormalMaterial>();
+		}
 
+		static ptr create(Color color) {
+			return std::make_shared<MeshNormalMaterial>(color);
+		}
 		virtual ~MeshNormalMaterial() = default;
 
 		virtual MeshNormalMaterial* clone() {

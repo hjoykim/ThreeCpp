@@ -668,7 +668,7 @@ namespace three {
 		vsm_vert = 129,
 		vsm_frag = 130,
 		transmissionmap_fragment=131,
-		transmissionmap_pars_fragment=131,
+		transmissionmap_pars_fragment=132,
 		unknown=999
 	};
 

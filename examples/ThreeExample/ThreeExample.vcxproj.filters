@@ -34,6 +34,9 @@
     <ClCompile Include="learningjs\ch4\BasicMeshMaterialExample.cpp">
       <Filter>learningjs\ch4</Filter>
     </ClCompile>
+    <ClCompile Include="learningjs\ch5\Basic2DGeometriesPlane.cpp">
+      <Filter>learningjs\ch5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ecore\ExampleUtil.h" />
@@ -107,6 +110,9 @@
     <ClInclude Include="learningjs\ch4\BasicMeshMaterialExample.h">
       <Filter>learningjs\ch4</Filter>
     </ClInclude>
+    <ClInclude Include="learningjs\ch5\Basic2DGeometriesPlane.h">
+      <Filter>learningjs\ch5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui\imgui.ini" />
@@ -126,6 +132,9 @@
     </Filter>
     <Filter Include="learningjs\ch4">
       <UniqueIdentifier>{53c83335-d35a-45a1-a7ad-bc08207a700f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="learningjs\ch5">
+      <UniqueIdentifier>{e005aad6-1dcf-4d32-8c08-863f35df4bc5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -26,7 +26,7 @@ public:
 
 		scene = std::make_shared<Scene>();
 
-		Texture::ptr textureGrass = TextureLoader::load("./assets/textures/ground/grasslight-big.jpg");
+		Texture::ptr textureGrass = TextureLoader::load(".../../../assets/textures/ground/grasslight-big.jpg");
 		textureGrass->wrapS = Wrapping::RepeatWrapping;
 		textureGrass->wrapT = Wrapping::RepeatWrapping;
 		textureGrass->repeat.set(10, 10);
@@ -99,9 +99,7 @@ public:
 
 		auto textureFlare0 = TextureLoader::load("./assets/textures/flares/lensflare0.png");
 		auto textureFlare1 = TextureLoader::load("./assets/textures/flares/lensflare3.png");
-		auto textureFlare2 = TextureLoader::load("./assets/textures/flares/lensflare3.png");
-		auto textureFlare3 = TextureLoader::load("./assets/textures/flares/lensflare3.png");
-		auto textureFlare4 = TextureLoader::load("./assets/textures/flares/lensflare3.png");
+
 
 		auto flareColor = Color(0xffaacc);
 

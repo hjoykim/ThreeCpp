@@ -28,7 +28,7 @@ public:
 
 		scene = std::make_shared<Scene>();
 
-		Texture::ptr textureGrass = TextureLoader::load("./assets/textures/ground/grasslight-big.jpg");
+		Texture::ptr textureGrass = TextureLoader::load("../../../assets/textures/ground/grasslight-big.jpg");
 		textureGrass->wrapS = Wrapping::RepeatWrapping;
 		textureGrass->wrapT = Wrapping::RepeatWrapping;
 		textureGrass->repeat.set(10, 10);

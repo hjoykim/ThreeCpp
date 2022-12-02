@@ -51,6 +51,12 @@ CGLControl::~CGLControl()
 	}
 }
 
+void CGLControl::SetExample(ThreeDemoClass* examplePtr)
+{
+	demo = examplePtr; 
+	demo->renderer->initGLParameter();
+}
+
 void CGLControl::Clear()
 {
 	GLfloat clear_buffer[] = { 0.0f,0.0f,0.0f,1.0f };

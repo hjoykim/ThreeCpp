@@ -7,13 +7,13 @@ namespace three {
 	class TextureLoader {
 	public:
 		TextureLoader(){}
-		static Texture::ptr load(const char* filePath) {
+		static Texture::ptr load(const string& filePath) {
 			
 			Texture::ptr texture = nullptr;
 
 			int width, height, nrComponents;
 
-			unsigned char* data = stbi_load(filePath, &width, &height, &nrComponents, 0);
+			unsigned char* data = stbi_load(filePath.c_str(), &width, &height, &nrComponents, 0);
 			std::vector<unsigned char> image(width * height * nrComponents);
 			
 			if (data) {

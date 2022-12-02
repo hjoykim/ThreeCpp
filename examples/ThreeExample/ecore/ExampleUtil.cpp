@@ -2,7 +2,9 @@
 #include <three/geometries/BoxGeometry.h>
 #include <three/geometries/ConeGeometry.h>
 #include <three/geometries/CylinderGeometry.h>
-
+#include <filesystem>
+#include <three/loaders/ObjLoader.h>
+#include <three/loaders/TextureLoader.h>
 void initRenderer(const GLRenderer::ptr& renderer) {
     renderer->setClearColor(Color().set(0x000000));
     renderer->shadowMap->enabled = true;
@@ -186,3 +188,30 @@ Mesh::ptr addGroundPlane(const Scene::ptr& scene)
     return plane;
 }
 
+Mesh::ptr addLargeGroundPlane(const Scene::ptr& scene, const bool useTexture) {
+
+    auto planeGeometry = PlaneBufferGeometry::create(10000,10000);
+    auto planeMaterial = MeshPhongMaterial::create(Color().set(0xffffff));
+    if (useTexture) {
+        std::string dir = filesystem::current_path().parent_path().parent_path().string();
+        TextureLoader loader;
+        auto texture = loader.load(dir + "\\assets\\textures\\general\\floor-wood.jpg");
+        planeMaterial->map = texture;
+    }
+    auto plane = Mesh::create(planeGeometry, planeMaterial);
+    plane->receiveShadow = true;
+
+    plane->rotation.setX(-0.5f * (float)M_PI);
+    plane->position.set(0, 0, 0);
+
+    scene->add(plane);
+
+    return plane;
+}
+Mesh::ptr applyMeshNormalMaterial(const BufferGeometry::ptr& geometry, Material::ptr material) {
+    if (material == NULL || !instanceOf<MeshNormalMaterial>(material.get())) {
+        material = MeshNormalMaterial::create();
+        material->side = Side::DoubleSide;
+    }
+    return Mesh::create(geometry, material);
+}

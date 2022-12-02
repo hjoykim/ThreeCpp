@@ -652,6 +652,53 @@ namespace three {
 					glDeleteProgram(p->program);
 			}
 		}
+		glDisable(GL_BLEND);
+		glDisable(GL_CULL_FACE);
+		glDisable(GL_DEPTH_TEST);
+		glDisable(GL_POLYGON_OFFSET_FILL);
+		glDisable(GL_SCISSOR_TEST);
+		glDisable(GL_STENCIL_TEST);
+		glDisable(GL_SAMPLE_ALPHA_TO_COVERAGE);
+
+		glBlendEquation(GL_FUNC_ADD);
+		glBlendFunc(GL_ONE, GL_ZERO);
+		glBlendFuncSeparate(GL_ONE, GL_ZERO, GL_ONE, GL_ZERO);
+
+		glColorMask(true, true, true, true);
+		glClearColor(0, 0, 0, 0);
+
+		glDepthMask(true);
+		glDepthFunc(GL_LESS);
+		glClearDepth(1);
+
+		glStencilMask(0xffffffff);
+		glStencilFunc(GL_ALWAYS, 0, 0xffffffff);
+		glStencilOp(GL_KEEP, GL_KEEP,GL_KEEP);
+		glClearStencil(0);
+
+		glCullFace(GL_BACK);
+		glFrontFace(GL_CCW);
+
+		glPolygonOffset(0, 0);
+
+		glActiveTexture(GL_TEXTURE0);
+
+		glBindFramebuffer(GL_FRAMEBUFFER, NULL);
+
+		if (capabilities->isGL2 == true)
+		{
+
+			glBindFramebuffer(GL_DRAW_BUFFER, NULL);
+			glBindFramebuffer(GL_READ_FRAMEBUFFER,NULL);
+
+		}
+
+		glUseProgram(0);
+
+		glLineWidth(1);
+
+		glScissor(0, 0, _width, _height);
+		glViewport(0, 0, _width, _height);
 	}
 
 	int GLRenderer::getPixelRatio()
@@ -1252,5 +1299,55 @@ namespace three {
 	{
 		textures->setTexture2D(*texture, 0);
 		state->unbindTexture();
+	}
+	void GLRenderer::initGLParameter(void)
+	{
+		glDisable(GL_BLEND);
+		glDisable(GL_CULL_FACE);
+		glDisable(GL_DEPTH_TEST);
+		glDisable(GL_POLYGON_OFFSET_FILL);
+		glDisable(GL_SCISSOR_TEST);
+		glDisable(GL_STENCIL_TEST);
+		glDisable(GL_SAMPLE_ALPHA_TO_COVERAGE);
+
+		glBlendEquation(GL_FUNC_ADD);
+		glBlendFunc(GL_ONE, GL_ZERO);
+		glBlendFuncSeparate(GL_ONE, GL_ZERO, GL_ONE, GL_ZERO);
+
+		glColorMask(true, true, true, true);
+		glClearColor(0, 0, 0, 0);
+
+		glDepthMask(true);
+		glDepthFunc(GL_LESS);
+		glClearDepth(1);
+
+		glStencilMask(0xffffffff);
+		glStencilFunc(GL_ALWAYS, 0, 0xffffffff);
+		glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
+		glClearStencil(0);
+
+		glCullFace(GL_BACK);
+		glFrontFace(GL_CCW);
+
+		glPolygonOffset(0, 0);
+
+		glActiveTexture(GL_TEXTURE0);
+
+		glBindFramebuffer(GL_FRAMEBUFFER, NULL);
+
+		if (capabilities->isGL2 == true)
+		{
+
+			glBindFramebuffer(GL_DRAW_BUFFER, NULL);
+			glBindFramebuffer(GL_READ_FRAMEBUFFER, NULL);
+
+		}
+
+		glUseProgram(0);
+
+		glLineWidth(1);
+
+		glScissor(0, 0, _width, _height);
+		glViewport(0, 0, _width, _height);
 	}
 }

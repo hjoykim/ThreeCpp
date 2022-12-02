@@ -24,7 +24,7 @@
 #include <learningjs/ch3/PointLightExample.h>
 #include <learningjs/ch3/SpotLightExample.h>
 #include <learningjs/ch4/BasicMeshMaterialExample.h>
-
+#include <learningjs/ch5/Basic2DGeometriesPlane.h>
 
 
 // CFormLeft
@@ -95,6 +95,7 @@ void CFormLeft::InitExample()
 	m_listBox.AddString(_T("Chapter3. 06-Area-Light"));
 	m_listBox.AddString(_T("Chapter3. 07-Lensflares"));
 	m_listBox.AddString(_T("Chapter4. 01-Basic-Material"));
+	m_listBox.AddString(_T("Chapter5. 01-Basic2D-Geometries-Plane"));
 
 
 	if (m_target) {
@@ -119,6 +120,7 @@ void CFormLeft::InitExample()
 		exampleList.Add(new AreaLightExample(rect.right, rect.bottom));
 		exampleList.Add(new LensflaresExample(rect.right, rect.bottom));
 		exampleList.Add(new BasicMeshMaterialExample(rect.right, rect.bottom));
+		exampleList.Add(new Basic2DGeometriesPlane(rect.right, rect.bottom));
 	}
 }
 

@@ -43,7 +43,7 @@ public :
     virtual ~CGLControl();
     HGLRC GetGLContext(void) { return hrc; }
     void SetGLContext(const HGLRC& glContext) { hrc = glContext; }
-    void SetExample(ThreeDemoClass* examplePtr) { demo = examplePtr; }
+    void SetExample(ThreeDemoClass* examplePtr);
 
     void Clear();
 

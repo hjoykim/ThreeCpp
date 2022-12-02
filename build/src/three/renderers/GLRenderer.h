@@ -422,6 +422,7 @@ namespace three {
 		 */
 		void initTexture(const Texture::ptr& texture);
 
+		void initGLParameter(void);
 	};
 }
 #endif
